@@ -8,6 +8,7 @@ import { ShowplanComponent } from './showplan/showplan.component';
 import { MysocietiesComponent } from './mysocieties/mysocieties.component';
 import { CreatesocietyComponent } from './createsociety/createsociety.component';
 import { ShowsocietiesComponent } from './showsocieties/showsocieties.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
                                                                   ]                         
                                           }
                                         ]},
+ { path:'userdashboard' ,component:UserdashboardComponent}
  
 ];
 
