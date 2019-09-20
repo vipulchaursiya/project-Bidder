@@ -1,0 +1,11 @@
+<div>
+    <form class="container" #m="ngForm"  >
+        <div><select class="btn-lg" name="mpid" [(ngModel)]="sociatyModel.masterPlanId">
+         <option *ngFor="let p of pn" value="{{p._id}}" >{{p.Planname}} </option> 
+        </select></div>
+        <br><br>
+        <div><ejs-datepicker id='datepicker' [(ngModel)]="sociatyModel.date" name="date"  class="btn-lg"  placeholder='Select a date' [value]='dateValue' [min]='minDate' class="col-sm-2" [max]='maxDate'></ejs-datepicker></div>
+        <br>       
+        <button type="button" class="btn btn-outline-secondary btn-lg" (click)="submit()">Submit</button>
+      </form>
+</div>  

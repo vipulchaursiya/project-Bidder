@@ -1,0 +1,30 @@
+                
+ 
+            <form class="form-inline" #m1="ngForm" class="container" >
+                <div class="form-group">
+                    <label for="planname">Plan Name</label>
+                    <input  [(ngModel)]="f.Planname" type="text" class="form-control form-block"  placeholder="Enter plan name" name="Planname">
+                  </div>
+              <div class="form-group">
+                <label for="Months">Months</label>
+                <input  [(ngModel)]="f.Months" type="text" class="form-control form-block"  placeholder="Enter Months" name="Months">
+              </div>
+              <div class="form-group">
+                <label for="interest">Interest</label>
+                <input  [(ngModel)]="f.Interest"type="text" class="form-control"  placeholder="Enter interest in numbers" name="interest">
+              </div>
+              <div class="form-group">
+                <label for="installment">Installment</label>
+                <input  [(ngModel)]="f.Installment"type="text" class="form-control"  placeholder="Enter Installment" name="installment">
+              </div>
+              <!-- <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+              </div> -->             
+
+           <br>
+              <button type="submit" (click)="submit()" class="btn btn-primary form-block form-control">Submit</button>
+            </form>
+        
+   
+

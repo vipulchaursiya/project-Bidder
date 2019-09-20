@@ -1,0 +1,71 @@
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+		<div class="col-xl-10 col-lg-12 col-md-9">
+  
+		  <div class="card o-hidden border-0 shadow-lg my-5">
+			<div class="card-body p-0">
+			  <!-- Nested Row within Card Body -->
+			  <div class="row">
+				<div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+				<div class="col-lg-6">
+				  <div class="p-5">
+					<div class="text-center">
+					  <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+					</div>
+					<form  #m1="ngForm" class="user">					
+					  <div class="form-group">
+						<input  name="email" type="text" [(ngModel)]="l.email" required #email="ngModel" class="form-control form-control-user" id="exampleInputEmail" placeholder="Enter Email Address...">
+					      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+						  <div *ngIf="email.errors.required">   Email is required.  </div>
+							<div *ngIf="email.errors.minlength">    Name must be at least 4 characters long.  </div>
+						</div>
+                         
+					</div>
+					  <div class="form-group">
+						<input  [(ngModel)]="l.password" #passvalid="ngModel" type="password" name="password"class="form-control form-control-user"  placeholder="Password">
+					  </div>					  
+					  <button class="btn btn-primary btn-user btn-block" (click)="login()">
+						Login
+					  </button>
+					  <div><span>Not a user <button (click)="signUp()" class="btn btn-default">Sign up </button></span></div>
+					  </form><!-- 
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				<span class="login100-form-title p-b-41">
+					Account Login
+				</span>
+				<form #m1="ngForm" class="login100-form validate-form p-b-33 p-t-5">
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100"[(ngModel)]="username" type="text" name="username" placeholder="User name">
+						<span class="focus-input100" [(ngmodel)] data-placeholder="&#xe82a;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-32">
+						<button class="login100-form-btn" routerLink="/dashboard">
+							Login
+						</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+    <div id="dropDownSelect1"></div>
+    
+   
+
+	
+ <div class="container">
+
