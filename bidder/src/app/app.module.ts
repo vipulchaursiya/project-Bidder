@@ -17,6 +17,10 @@ import { CreatesocietyComponent } from './createsociety/createsociety.component'
 import { ShowsocietiesComponent } from './showsocieties/showsocieties.component';
 import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { UsersidebarComponent } from './usersidebar/usersidebar.component';
+import { UsershowplanComponent } from './usershowplan/usershowplan.component';
+import { environment } from 'src/environments/environment';
+import { ViewplanComponent } from './viewplan/viewplan.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +32,15 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
     TopbarComponent,
     SignupComponent,
     ShowplanComponent,  
-    MysocietiesComponent, CreatesocietyComponent, ShowsocietiesComponent, UserdashboardComponent
+    MysocietiesComponent, CreatesocietyComponent, ShowsocietiesComponent, UserdashboardComponent, UsersidebarComponent, UsershowplanComponent, ViewplanComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    DatePickerModule
+    DatePickerModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

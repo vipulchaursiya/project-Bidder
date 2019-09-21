@@ -34,7 +34,7 @@ export class SignupComponent implements OnInit {
     if(this.alert==""){
     this.l.role="user";
     this.ds.signupdata(this.l).subscribe( (data) =>{
-      this.route.navigate(['/dashboard']);
+      this.route.navigate(['/userdashboard']);
     })
   }
   }

@@ -6,6 +6,7 @@ import { Alert } from 'selenium-webdriver';
 
 @Injectable({
   providedIn: 'root'
+
 })
 export class StoreService {
  

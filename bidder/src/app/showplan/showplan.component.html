@@ -1,15 +1,20 @@
  
  
  
- <div *ngFor="let p of s"  class="card text-black  mb-3 " style="max-width: 18rem;">
+ <div *ngFor="let p of s"  class="card text-black  mb-3 aa " style="max-width: 18rem;">
        
-    <div class="card-title  bg-success"> <h3> &nbsp;{{p.Planname}}</h3>
+    <div class="card-title"> <h3 style="background-color:cornflowerblue;"> &nbsp;{{p.Planname}}</h3>
     </div>      
          <h5 class="card-title">Months:{{p.Months}}</h5>      
           <h5 class="card-title">Interest:{{p.Interest}}</h5>
           <h5 class="card-title">Installment:{{p.Installment}}</h5> 
-          <button type="submit" class="btn btn-danger" (click)="delete(p.Planname)" >Delete Plan</button>
-</div>        
+        
+        <footer style="background-color: lightseagreen;">
+          <button type="submit" class="btn btn-danger" (click)="view(p.Planname,p.Months,p.Interest,p.Installment)" style="margin-left: 20px;" >View</button>
+          <button type="submit" class="btn btn-danger" (click)="delete(p.Planname)"style="margin-left: 20px;" >Delete Plan</button>
+         </footer>
+
+         </div>        
     
 
 <!-- value="Refresh Page" onClick="window.location.reload()"    -->

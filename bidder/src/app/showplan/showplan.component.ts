@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../store.service';
 import { ɵangular_packages_platform_browser_dynamic_platform_browser_dynamic_a } from '@angular/platform-browser-dynamic';
 import { Bidder } from '../model/planbidder';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-showplan',
@@ -10,7 +11,9 @@ import { Bidder } from '../model/planbidder';
 })
 export class ShowplanComponent implements OnInit {
    s:any;
-  constructor(private ds:StoreService) {}   
+
+   
+  constructor(private ds:StoreService,private router:Router) { }   
    m;
   ngOnInit() {
        
@@ -32,7 +35,13 @@ export class ShowplanComponent implements OnInit {
      })
      
    }
+    
+view(p1,p2,p3,p4)
+{
+  alert("hii");
   
+  this.router.navigate(['/dashboard/viewplan'],{queryParams:{Planname:p1,Months:p2,Installment:p3,Interest:p4}});
+}
 
 }
  

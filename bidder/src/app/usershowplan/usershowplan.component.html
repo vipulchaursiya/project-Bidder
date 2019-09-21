@@ -1,0 +1,15 @@
+ 
+ <h3>NEW PLANS-</h3>
+ <!-- <app-showplan></app-showplan> -->
+  <div *ngFor="let p of s"  class="card text-black  mb-3 aa" style="max-width: 18rem;">
+       
+        <div class="card-title"> <h3 style="background-color:cornflowerblue;"> &nbsp;{{p.Planname}}</h3>
+        </div>      
+             <h5 class="card-title">Months:{{p.Months}}</h5>      
+              <h5 class="card-title">Interest:{{p.Interest}}</h5>
+              <h5 class="card-title">Installment:{{p.Installment}}</h5> 
+              <button type="submit" class="btn btn-danger"(click)="participate()">Participate</button>
+    </div>         
+         
+    
+    <!-- value="Refresh Page" onClick="window.location.reload()"    -->
