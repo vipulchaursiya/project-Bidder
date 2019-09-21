@@ -15,21 +15,39 @@ import { SignupComponent } from '../signup/signup.component';
 export class LoginComponent implements OnInit {
   
   l =new user();
-  d;
+  d; mail;
+  alert;
 
   constructor( private ds:StoreService ,private route:Router) { }
   
   ngOnInit() {
   }
- 
+  verifyuser(){
+    this.ds.checkmail(this.l).subscribe( (data) =>{
+      this.mail=data;
+      console.log(this.mail);
+      if(this.mail.status=="false"&& this.l.email>0){
+        this.alert="This Email deos not exits, please sign up first";
+      }
+      else{
+        this.alert="";
+      }
+    })
+  }
   login(){
       this.ds.userdata(this.l).subscribe( (data) =>{
     this.d=data;
          console.log(this.d.status);
-         if(this.d.status=="okkk"){
-           localStorage.setItem("email",this.d.doc[0].email);
+         console.log(this.d)
+         if(this.d.doc[0].role=="admin" ){
+          // localStorage.setItem("email",this.d.doc[0].email);
            this.route.navigate(['/dashboard']);
-         }    
+         } 
+         else if(this.d.doc[0].role=="user"){
+          localStorage.setItem('email',this.d.doc[0].email);
+          localStorage.setItem('role',this.d.doc[0].role);
+           this.route.navigate(['/userdashboard']);
+         } 
      });
   }
   signUp(){

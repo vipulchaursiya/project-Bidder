@@ -1,4 +1,5 @@
 export class Bidder {
+  
      Planname;
      Months;
      Installment;

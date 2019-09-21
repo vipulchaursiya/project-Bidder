@@ -1,13 +1,19 @@
  
  
+<<<<<<< HEAD
  
  <div *ngFor="let p of s"  class="card text-black  mb-3 aa " style="max-width: 18rem;">
+=======
+  <div class="conatiner-fluid flex-wrap d-flex flex-row " style="padding-block: 20px;"> 
+ <div *ngFor="let p of s"  class="card text-black p-2 mb-3 " style="max-width: 18rem; padding:20px ;">
+>>>>>>> d05b438ff69c6d6ec92814a46b0a067daacc1fc6
        
     <div class="card-title"> <h3 style="background-color:cornflowerblue;"> &nbsp;{{p.Planname}}</h3>
     </div>      
          <h5 class="card-title">Months:{{p.Months}}</h5>      
           <h5 class="card-title">Interest:{{p.Interest}}</h5>
           <h5 class="card-title">Installment:{{p.Installment}}</h5> 
+<<<<<<< HEAD
         
         <footer style="background-color: lightseagreen;">
           <button type="submit" class="btn btn-danger" (click)="view(p.Planname,p.Months,p.Interest,p.Installment)" style="margin-left: 20px;" >View</button>
@@ -15,6 +21,11 @@
          </footer>
 
          </div>        
+=======
+          <button type="submit" class="btn btn-danger" (click)="delete(p.Planname)"  >Delete Plan</button>
+</div> 
+</div>       
+>>>>>>> d05b438ff69c6d6ec92814a46b0a067daacc1fc6
     
 
-<!-- value="Refresh Page" onClick="window.location.reload()"    -->
+<!-- value="Refresh Page" onClick="window.location.reload()   -->

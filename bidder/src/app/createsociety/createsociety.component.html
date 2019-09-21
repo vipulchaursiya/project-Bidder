@@ -1,11 +1,21 @@
-<div>
+<!-- <div class="container-fluid">
+    <form class="" #m="ngForm">
+        <div class="jumbotron"  > <input type="text"[(ngModel)]="sociatyModel.Discripton" name="Discripton" placeholder="Enter Society Discripton"></select></div>
+    </form>
+</div> -->
+
+ <div>
     <form class="container" #m="ngForm"  >
-        <div><select class="btn-lg" name="mpid" [(ngModel)]="sociatyModel.masterPlanId">
+        <div><select class="btn-lg" name="mpid"  [(ngModel)]="sociatyModel.masterPlanId">
+            <option value="0" disabled selected>Select Plan</option>
          <option *ngFor="let p of pn" value="{{p._id}}" >{{p.Planname}} </option> 
         </select></div>
         <br><br>
-        <div><ejs-datepicker id='datepicker' [(ngModel)]="sociatyModel.date" name="date"  class="btn-lg"  placeholder='Select a date' [value]='dateValue' [min]='minDate' class="col-sm-2" [max]='maxDate'></ejs-datepicker></div>
-        <br>       
+        <span>Enter the date: &nbsp; <input type="date"  name="date" [(ngModel)]="sociatyModel.Date" name="date"></span>
+        <br>  <br>     
         <button type="button" class="btn btn-outline-secondary btn-lg" (click)="submit()">Submit</button>
       </form>
 </div>  
+
+<hr>
+<hr>

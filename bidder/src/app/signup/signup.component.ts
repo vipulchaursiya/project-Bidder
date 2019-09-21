@@ -21,8 +21,9 @@ export class SignupComponent implements OnInit {
   checkemail(){
     this.ds.checkmail(this.l).subscribe((data) =>{
       this.mail=data
-     if(this.mail.status=="true"){
-      this.alert="this email already exists";
+      this.l.role="user"
+     if(this.mail.status=="false"){
+      this.alert="this email already exists"
      }
      else{
        this.alert="";

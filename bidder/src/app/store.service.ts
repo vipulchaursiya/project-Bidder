@@ -30,13 +30,12 @@ export class StoreService {
      return this.http.post("http://localhost:4100/checkmail",f);
    }
    ////for delete plan from show plan
-    deleteplan(f){
-     
+    deleteplan(f){     
       return this.http.post('http://localhost:4100/deleteplan',{planName:f});
     }
     ///for create society
     sendsocietydata(f){
-      alert(f);
+      alert(JSON.stringify(f));
       return this.http.post('http://localhost:4100/deleteplan',f)
     }
 

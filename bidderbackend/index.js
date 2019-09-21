@@ -25,7 +25,7 @@ app.post('/checkmail',bodyParser.json(),(req,res) => {
             res.send({ status:"true"})        
         }
         else {
-            res.send({ status:"false"})           
+            res.send({ status:"false",docs:doc})           
         }
     })
 })
@@ -106,6 +106,8 @@ app.post('/deleteplan',bodyParser.json(),(req,res) =>{
                       
                        })
 })
+
+////insert select plan in society
 
 
 app.listen(4100,() =>{console.log("API started runnning on 4100 port")});

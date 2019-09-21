@@ -12,13 +12,16 @@ import { Router } from '@angular/router';
 export class ShowplanComponent implements OnInit {
    s:any;
 
+
    
   constructor(private ds:StoreService,private router:Router) { }   
+
    m;
   ngOnInit() {
        
     this.ds.showplandata().subscribe((data) =>{
       this.s=data.docs;
+      
       
      //alert(JSON.stringify(this.s));
     })   
@@ -30,15 +33,13 @@ export class ShowplanComponent implements OnInit {
       
      //alert(JSON.stringify(this.s));
     }) 
-
-
-     })
-     
+     })     
    }
-    
+
 view(p1,p2,p3,p4)
 {
   alert("hii");
+
   
   this.router.navigate(['/dashboard/viewplan'],{queryParams:{Planname:p1,Months:p2,Installment:p3,Interest:p4}});
 }
