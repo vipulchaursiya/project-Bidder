@@ -21,8 +21,9 @@ export class SignupComponent implements OnInit {
   checkemail(){
     this.ds.checkmail(this.l).subscribe((data) =>{
       this.mail=data
-     if(this.mail.status=="true"){
-      this.alert="this email already exists";
+      this.l.role="user"
+     if(this.mail.status=="false"){
+      this.alert="this email already exists"
      }
      else{
        this.alert="";
@@ -34,7 +35,7 @@ export class SignupComponent implements OnInit {
     if(this.alert==""){
     this.l.role="user";
     this.ds.signupdata(this.l).subscribe( (data) =>{
-      this.route.navigate(['/dashboard']);
+      this.route.navigate(['/userdashboard']);
     })
   }
   }

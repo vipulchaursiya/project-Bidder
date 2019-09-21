@@ -9,28 +9,27 @@ import { Bidder } from '../model/planbidder';
 })
 export class CreatesocietyComponent implements OnInit {
 pn;
+val;found;
+
 sociatyModel= new Bidder();
-
   constructor( private ds:StoreService) { }
-  // public minDate: Date = new Date ("05/07/2017");
-  // public maxDate: Date = new Date ("05/27/2017");
-  // public dateValue: Date = new Date ("05/16/2017");
-
-   
-  ngOnInit() {
-   
+  ngOnInit() {   
     this.ds.showplandata().subscribe( (data) =>{
       this.pn=data.docs;
     })
-  }
+  }      
    submit(){
-     console.log(this.sociatyModel);
-
-
+     this.pn.forEach(element => { 
       
-     alert(JSON.stringify(this.sociatyModel));
-    //  this.ds.sendsocietydata(this.pn).subscribe( (data) =>{
+       if(element._id===this.sociatyModel.masterPlanId)
+       {
+         this.found={plandata:element, Date:this.sociatyModel.Date};         
+       }
+     }); 
+    
+     //alert(JSON.stringify(this.sociatyModel));
+     this.ds.sendsocietydata(this.found).subscribe( (data) =>{
       
-    //  })
+     })
    }
 }

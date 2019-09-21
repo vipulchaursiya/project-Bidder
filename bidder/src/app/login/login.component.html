@@ -12,15 +12,16 @@
 				<div class="col-lg-6">
 				  <div class="p-5">
 					<div class="text-center">
-					  <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+					  <h1 class="h4 text-gray-900 mb-4">Welcome to Bidder</h1>
 					</div>
 					<form  #m1="ngForm" class="user">					
 					  <div class="form-group">
-						<input  name="email" type="text" [(ngModel)]="l.email" required #email="ngModel" class="form-control form-control-user" id="exampleInputEmail" placeholder="Enter Email Address...">
-					      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+						<input  name="email" type="text" [(ngModel)]="l.email"  (blur)="verifyuser()" required #email="ngModel" class="form-control form-control-user" id="exampleInputEmail" placeholder="Enter Email Address...">
+						<div style="color: brown">{{alert}}</div> 
+						<!-- <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
 						  <div *ngIf="email.errors.required">   Email is required.  </div>
 							<div *ngIf="email.errors.minlength">    Name must be at least 4 characters long.  </div>
-						</div>
+						</div> -->
                          
 					</div>
 					  <div class="form-group">
